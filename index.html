@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Savings Potential</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Track Your Savings Potential</h1>
+            <p>Use our savings tracker to see how your savings can grow over time based on your financial details.</p>
+        </header>
+        <div class="content">
+            <div class="input-section">
+                <label for="monthly-income">Monthly Income (TZS)</label>
+                <input type="number" id="monthly-income" value="1000000">
+                
+                <label for="monthly-expenses">Monthly Expenses (TZS)</label>
+                <input type="number" id="monthly-expenses" value="500000">
+                
+                <label for="savings-goal">Savings Goal Amount (TZS)</label>
+                <input type="number" id="savings-goal" value="2000000">
+                
+                <label for="timeframe">Timeframe to Achieve Savings Goal (months)</label>
+                <input type="number" id="timeframe" value="12">
+                
+                <label for="percentage-save">Percentage of Income to Save (%)</label>
+                <input type="number" id="percentage-save" value="20">
+                
+                <label for="interest-rate">Bank Interest Rate (%) <small>(optional)</small></label>
+                <input type="number" id="interest-rate" placeholder="Optional">
+                
+                <button id="calculate-button">Calculate My Savings</button>
+            </div>
+            <div class="results-section">
+                <h2>Potential Future Balance: <span id="future-balance">TZS 5,000,000</span></h2>
+                <canvas id="savings-chart"></canvas>
+                <div id="chart-description" class="info-box">
+                    <h3>Chart Description:</h3>
+                    <p>The chart shows an estimate of how much your savings could grow over time based on your inputs. Changes in your monthly income, expenses, savings goal, timeframe, and interest rate can affect the outcome.</p>
+                    <p>Results do not predict future performance and do not account for economic or market factors.</p>
+                </div>
+                <div id="bank-products" class="info-box"></div>
+                <div id="explanation" class="info-box"></div>
+                <div id="suggestions" class="info-box"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
